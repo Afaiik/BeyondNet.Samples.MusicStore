@@ -1,7 +1,6 @@
 ﻿using Catalog.Domain.Aggregates.AlbumAggregate.ValueObjects;
 using Catalog.Domain.Events;
 using Catalog.Domain.Exceptions;
-using Catalog.Domain.Services;
 using Shared.Domain;
 using Shared.Domain.Bus.Event;
 using Shared.Domain.ValueObjects;
@@ -10,10 +9,8 @@ namespace Catalog.Domain.Aggregates.AlbumAggregate
 {
     public class Album : AggregateRoot
     {
-        private readonly IDurationFormatter _durationFormatter;
+        public AggregateId<Album, string> Id { get; private set; }
 
-        public string Id { get; private set; }
-        
         private int _albumTypeId;
         public string Name { get; private set; }
         public string Description { get; private set; }
@@ -28,14 +25,10 @@ namespace Catalog.Domain.Aggregates.AlbumAggregate
         public AuditValueObject Audit { get; private set; }
         public EAlbumStatus Status { get; set; }
 
-        private Album(IDurationFormatter durationFormatter)
+     
+        private Album(AggregateId<Album, string> id, int albumTypeId, string name, string description, Author author, List<string> tags)
         {
-            _durationFormatter = durationFormatter;
-        }
-
-        private Album(int albumTypeId, string name, string description, Author author, List<string> tags)
-        {
-            Id = Guid.NewGuid().ToString();
+            Id = id;
             Name = name;
             Description = description;
             Author = author;

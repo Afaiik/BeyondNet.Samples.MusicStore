@@ -1,19 +1,20 @@
 ﻿using Catalog.Domain.Aggregates.AlbumAggregate.ValueObjects;
+using Catalog.Domain.Album;
 using Catalog.Domain.Events;
 using Catalog.Domain.Exceptions;
 using Shared.Domain;
 using Shared.Domain.Bus.Event;
 using Shared.Domain.ValueObjects;
 
-namespace Catalog.Domain.Aggregates.AlbumAggregate
+namespace Catalog.Domain.Aggregates.Album
 {
     public class Album : AggregateRoot
     {
         public AggregateId<Album, string> Id { get; private set; }
 
         private int _albumTypeId;
-        public string Name { get; private set; }
-        public string Description { get; private set; }
+        public AlbumName Name { get; private set; }
+        public AlbumDescription Description { get; private set; }
         public Author Author { get; private set; }
 
         private readonly List<string> _tags;
@@ -26,7 +27,7 @@ namespace Catalog.Domain.Aggregates.AlbumAggregate
         public EAlbumStatus Status { get; set; }
 
      
-        private Album(AggregateId<Album, string> id, int albumTypeId, string name, string description, Author author, List<string> tags)
+        private Album(AggregateId<Album, string> id, int albumTypeId, AlbumName name, AlbumDescription description, Author author, List<string> tags)
         {
             Id = id;
             Name = name;

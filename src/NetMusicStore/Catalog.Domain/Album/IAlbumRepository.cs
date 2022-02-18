@@ -2,7 +2,7 @@
 
 namespace Catalog.Domain.Aggregates.AlbumAggregate
 {
-    public interface IAlbumRepository : IRepository<Album>
+    public interface IAlbumRepository : IReadRepository<Album, string>, IWriteRepository<Album, string>
     {
     }
 }

@@ -1,33 +1,27 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace Shared.Domain.ValueObjects
 {
-    public class Uuid : ValueObject
+    public abstract class EntityId<T> : ValueObject
     {
-        public string Value { get; }
+        public T Value { get; }
 
-        public Uuid(string value)
+        public EntityId(T value)
         {
-            EnsureIsValidUuid(value);
+            Guard(value);
+
             Value = value;
         }
 
-        private void EnsureIsValidUuid(string value)
+        private void Guard(T value)
         {
-            if (!Guid.TryParse(value, out var Uuid))
-                throw new InvalidEnumArgumentException($"{value} is not a valid GUID");
+            if (value == null)
+                throw new InvalidEnumArgumentException($"{value} cannot be null");
         }
 
         public override string ToString()
         {
-            return Value;
-        }
-
-        public static Uuid Random()
-        {
-            return new Uuid(Guid.NewGuid().ToString());
+            return Value.ToString();
         }
 
         protected override IEnumerable<object> GetAtomicValues()
@@ -39,10 +33,11 @@ namespace Shared.Domain.ValueObjects
         {
             if (this == obj) return true;
 
-            var item = obj as Uuid;
+            var item = obj as EntityId<T>;
+
             if (item == null) return false;
 
-            return Value == item.Value;
+            return Value?.ToString() == item.Value?.ToString();
         }
 
         public override int GetHashCode()

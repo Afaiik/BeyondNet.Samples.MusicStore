@@ -1,24 +1,24 @@
 ﻿namespace NetMusicStore.Services.Shared.ValueObjects
 {
-    public class AuditValueObject : ValueObject
+    public class Audit : ValueObject
     {
         public string UserCreator { get; private set; }
         public DateTime CreatedOn { get; private set; }
         public string UserUpdater { get; private set; }
         public Nullable<DateTime> UpdatedOn { get; private set; }
 
-        private AuditValueObject(string userCreator)
+        private Audit(string userCreator)
         {
             UserCreator = userCreator;
             CreatedOn = DateTime.UtcNow;
         }
 
-        public static AuditValueObject Create(string userCreator)
+        public static Audit Create(string userCreator)
         {
-            return new AuditValueObject(userCreator);
+            return new Audit(userCreator);
         }
 
-        public AuditValueObject Update(AuditValueObject audit, string userUpdater)
+        public Audit Update(Audit audit, string userUpdater)
         {
             audit.UserUpdater = userUpdater;
             audit.UpdatedOn = DateTime.UtcNow;

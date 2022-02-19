@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{7767AC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMusicStore.Services.Shared", "Services\Shared\NetMusicStore.Services.Shared\NetMusicStore.Services.Shared.csproj", "{243EB427-2CD5-45DB-87AE-8BD3D71E9173}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMusicStore.Services.Ideas.Application", "Services\Ideas\NetMusicStore.Services.Ideas.Application\NetMusicStore.Services.Ideas.Application.csproj", "{6932B546-002E-4C0E-A195-4FD4C9C97803}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{243EB427-2CD5-45DB-87AE-8BD3D71E9173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{243EB427-2CD5-45DB-87AE-8BD3D71E9173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{243EB427-2CD5-45DB-87AE-8BD3D71E9173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6932B546-002E-4C0E-A195-4FD4C9C97803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6932B546-002E-4C0E-A195-4FD4C9C97803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6932B546-002E-4C0E-A195-4FD4C9C97803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6932B546-002E-4C0E-A195-4FD4C9C97803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{FD2AA9A1-A019-429B-BD33-B6E0F0D75E8E} = {B749613F-30C6-48FA-A139-2CF1541B53CC}
 		{7767ACB3-52A6-4096-BDAC-E33A32292282} = {576FE444-CED6-4EBA-ABC2-50F6AF206FC6}
 		{243EB427-2CD5-45DB-87AE-8BD3D71E9173} = {7767ACB3-52A6-4096-BDAC-E33A32292282}
+		{6932B546-002E-4C0E-A195-4FD4C9C97803} = {B749613F-30C6-48FA-A139-2CF1541B53CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21FF9321-A951-4A71-85A6-0286807B4762}

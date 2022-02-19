@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E88BFAA7-3D20-4247-BB48-D7F0E7096128}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ED119F68-6078-4575-B7F4-638257E0C893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7875132C-3C66-4006-8205-38197AA29510}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{CA0DB25A-F865-444E-807D-7BC82F1DBB7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{685EA9A7-6C34-44B3-B984-A4256C4E28CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.EventBus", "BuildingBlocks\EventBus\EventBus\NetMusicStore.EventBus.csproj", "{6BBDEA71-C131-49B1-BD32-3BF84B047C98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.EventBus.MsSql", "BuildingBlocks\EventBus\EventBus.MsSql\NetMusicStore.EventBus.MsSql.csproj", "{5018A501-301C-4B6F-A174-C7ECBE580DB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.EventBus.RabbitMq", "BuildingBlocks\EventBus\EventBus.RabbitMq\NetMusicStore.EventBus.RabbitMq.csproj", "{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0BEC9A08-8018-4006-A86A-961163DB8DD3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.Shared", "BuildingBlocks\Shared\NetMusicStore.Shared\NetMusicStore.Shared.csproj", "{ED3E08D8-3C3B-424B-9F44-594CB532AB69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{576FE444-CED6-4EBA-ABC2-50F6AF206FC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ideas", "Ideas", "{B749613F-30C6-48FA-A139-2CF1541B53CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetMusicStore.Services.Ideas.Domain", "Services\Ideas\NetMusicStore.Services.Ideas.Domain\NetMusicStore.Services.Ideas.Domain.csproj", "{FD2AA9A1-A019-429B-BD33-B6E0F0D75E8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BBDEA71-C131-49B1-BD32-3BF84B047C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBDEA71-C131-49B1-BD32-3BF84B047C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBDEA71-C131-49B1-BD32-3BF84B047C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBDEA71-C131-49B1-BD32-3BF84B047C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5018A501-301C-4B6F-A174-C7ECBE580DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5018A501-301C-4B6F-A174-C7ECBE580DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5018A501-301C-4B6F-A174-C7ECBE580DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5018A501-301C-4B6F-A174-C7ECBE580DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED3E08D8-3C3B-424B-9F44-594CB532AB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED3E08D8-3C3B-424B-9F44-594CB532AB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED3E08D8-3C3B-424B-9F44-594CB532AB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED3E08D8-3C3B-424B-9F44-594CB532AB69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2AA9A1-A019-429B-BD33-B6E0F0D75E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2AA9A1-A019-429B-BD33-B6E0F0D75E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2AA9A1-A019-429B-BD33-B6E0F0D75E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2AA9A1-A019-429B-BD33-B6E0F0D75E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA0DB25A-F865-444E-807D-7BC82F1DBB7E} = {ED119F68-6078-4575-B7F4-638257E0C893}
+		{685EA9A7-6C34-44B3-B984-A4256C4E28CC} = {CA0DB25A-F865-444E-807D-7BC82F1DBB7E}
+		{6BBDEA71-C131-49B1-BD32-3BF84B047C98} = {685EA9A7-6C34-44B3-B984-A4256C4E28CC}
+		{5018A501-301C-4B6F-A174-C7ECBE580DB3} = {685EA9A7-6C34-44B3-B984-A4256C4E28CC}
+		{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539} = {685EA9A7-6C34-44B3-B984-A4256C4E28CC}
+		{0BEC9A08-8018-4006-A86A-961163DB8DD3} = {ED119F68-6078-4575-B7F4-638257E0C893}
+		{ED3E08D8-3C3B-424B-9F44-594CB532AB69} = {0BEC9A08-8018-4006-A86A-961163DB8DD3}
+		{576FE444-CED6-4EBA-ABC2-50F6AF206FC6} = {ED119F68-6078-4575-B7F4-638257E0C893}
+		{B749613F-30C6-48FA-A139-2CF1541B53CC} = {576FE444-CED6-4EBA-ABC2-50F6AF206FC6}
+		{FD2AA9A1-A019-429B-BD33-B6E0F0D75E8E} = {B749613F-30C6-48FA-A139-2CF1541B53CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21FF9321-A951-4A71-85A6-0286807B4762}
+	EndGlobalSection
+EndGlobal

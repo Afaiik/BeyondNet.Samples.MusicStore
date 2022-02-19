@@ -1,6 +1,5 @@
-﻿using Catalog.Domain.Aggregates.AlbumAggregate.ValueObjects;
-using Catalog.Domain.Events;
-using Catalog.Domain.Exceptions;
+﻿using Catalog.Domain.Events;
+using Catalog.Domain.Shared.ValueObjects;
 using Shared.Domain;
 using Shared.Domain.Bus.Event;
 using Shared.Domain.ValueObjects;

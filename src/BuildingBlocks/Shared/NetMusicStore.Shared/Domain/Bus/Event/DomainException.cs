@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NetMusicStore.Shared.Domain.Bus.Event
+﻿namespace NetMusicStore.Shared.Domain.Bus.Event
 {
     public class DomainException : BaseException
     {

@@ -1,62 +1,70 @@
-﻿using Catalog.Domain.Aggregates.AlbumAggregate.ValueObjects;
-using Catalog.Domain.Album;
+﻿using Catalog.Domain.Aggregates.Songs;
 using Catalog.Domain.Events;
-using Catalog.Domain.Exceptions;
+using Catalog.Domain.Shared.ValueObjects;
 using Shared.Domain;
 using Shared.Domain.Bus.Event;
 using Shared.Domain.ValueObjects;
 
-namespace Catalog.Domain.Aggregates.Album
+namespace Catalog.Domain.Albums
 {
     public class Album : AggregateRoot
     {
         public AggregateId<Album, string> Id { get; private set; }
-
-        private int _albumTypeId;
+        public AlbumType Type { get; private set; }
         public AlbumName Name { get; private set; }
         public AlbumDescription Description { get; private set; }
         public Author Author { get; private set; }
-
-        private readonly List<string> _tags;
-        public IReadOnlyCollection<string> Tags => _tags.AsReadOnly();
-
-        private readonly List<Song> _songs;
-
-        public IReadOnlyCollection<Song> Songs => _songs.AsReadOnly();
         public AuditValueObject Audit { get; private set; }
-        public EAlbumStatus Status { get; set; }
+        public EAlbumStatus Status { get; private set; }
 
-     
-        private Album(AggregateId<Album, string> id, int albumTypeId, AlbumName name, AlbumDescription description, Author author, List<string> tags)
+        private readonly List<AlbumTag> _tags;
+        public IReadOnlyCollection<AlbumTag> Tags => _tags.AsReadOnly();
+        
+        private readonly List<Song> _songs;
+        public IReadOnlyCollection<Song> Songs => _songs.AsReadOnly();
+
+
+        private Album(AggregateId<Album, string> id,
+                      AlbumType type,
+                      AlbumName name,
+                      AlbumDescription description,
+                      Author author,
+                      List<AlbumTag> tags)
         {
             Id = id;
             Name = name;
             Description = description;
             Author = author;
-            _albumTypeId = albumTypeId;
+            Type = type;
             _tags = tags;
             _songs = new List<Song>();
             Audit =  AuditValueObject.Create(author.UserName);
             Status = EAlbumStatus.Pending;
 
-            AddAlbumCreatedDomainEvent(_albumTypeId, Id, Name, Description, Author, _tags);
+            AddAlbumCreatedDomainEvent(id.Value, type.Description, name.Value, description.Value);
         }
 
-        public void SetAlbumTypeId(int id)
+        public void SetType(AlbumType type)
         {
-            _albumTypeId     = id;
+            Type = type;
         }
 
-        private void AddAlbumCreatedDomainEvent(int albumTypeId, string id, string name, string description, Author author, List<string> tags)
+        private void AddAlbumCreatedDomainEvent(string id, string type, string name, string description)
         {
-            var createdEvent = new AlbumCreatedDomainEvent(albumTypeId, id, name, description, author.UserName, tags.ToArray());
+            var createdEvent = new AlbumCreatedDomainEvent(id, type, name, description);
 
             AddDomainEvent(createdEvent);
         }
 
-        public static Album Create(int albumTypeId, string name, string description, Author author, List<string> tags)
+        public static Album Create(AlbumType type,
+                                   AlbumName name,
+                                   AlbumDescription description,
+                                   Author author,
+                                   List<AlbumTag> tags)
         {
-            return new Album(albumTypeId, name, description, author, tags);
+            var id = AggregateId<Album, string>.From(Guid.NewGuid().ToString());
+
+            return new Album(id, type, name, description, author, tags);
         }
 
         public void SendToLab()
@@ -66,7 +74,7 @@ namespace Catalog.Domain.Aggregates.Album
 
             Status = EAlbumStatus.InLab;
 
-            AddDomainEvent(new AlbumSentToLabDomainEvent(Id));
+            AddDomainEvent(new AlbumSentToLabDomainEvent(Id.Value));
         }
 
         public void SendToSales()
@@ -76,7 +84,7 @@ namespace Catalog.Domain.Aggregates.Album
 
             Status = EAlbumStatus.InLab;
 
-            AddDomainEvent(new AlbumSentToSalesDomainEvent(Id));
+            AddDomainEvent(new AlbumSentToSalesDomainEvent(Id.Value));
         }
 
         public void Cancel()
@@ -86,7 +94,7 @@ namespace Catalog.Domain.Aggregates.Album
 
             Status = EAlbumStatus.Canceled;
 
-            AddDomainEvent(new AlbumCanceledDomainEvent(Id));
+            AddDomainEvent(new AlbumCanceledDomainEvent(Id.Value));
         }
 
         public void Close()
@@ -96,7 +104,7 @@ namespace Catalog.Domain.Aggregates.Album
 
             Status = EAlbumStatus.Closed;
 
-            AddDomainEvent(new AlbumClosedDomainEvent(Id));
+            AddDomainEvent(new AlbumClosedDomainEvent(Id.Value));
         }
 
         public void AddSong(string name, string description, double duration, List<string> tags, Author author)

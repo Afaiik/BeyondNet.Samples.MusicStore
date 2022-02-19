@@ -44,5 +44,5 @@ namespace Shared.Domain.ValueObjects
         {
             return HashCode.Combine(Value);
         }
-    }
+    }    
 }

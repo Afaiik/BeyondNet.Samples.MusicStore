@@ -1,7 +1,7 @@
 ﻿using Shared.Domain.Bus.Event;
 using System;
 
-namespace Catalog.Domain.Exceptions
+namespace Catalog.Domain.Albums
 {
     public class AlbumDomainException : DomainException
     {

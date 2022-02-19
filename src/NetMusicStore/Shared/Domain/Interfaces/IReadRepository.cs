@@ -4,12 +4,12 @@ namespace Shared.Domain.Interfaces
 {
     public interface IReadRepository<T, K> where T : IAggregateRoot
     {
-        IReadOnlyList<T> Find(Criteria criteria);
+        Task<IReadOnlyList<T>> Find(Criteria criteria);
 
-        T FindOne(Criteria criteria);
+        Task<T> FindOne(Criteria criteria);
 
-        T FindById(K id);
+        Task<T> FindById(K id);
 
-        bool Exists(Criteria criteria);
+        Task<bool> Exists(Criteria criteria);
     }
 }

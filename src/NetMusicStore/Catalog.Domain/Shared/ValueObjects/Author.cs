@@ -1,6 +1,6 @@
 ﻿using Shared.Domain.ValueObjects;
 
-namespace Catalog.Domain.Aggregates.AlbumAggregate.ValueObjects
+namespace Catalog.Domain.Shared.ValueObjects
 {
     public class Author : ValueObject
     {

@@ -1,6 +1,6 @@
 ﻿using Shared.Domain;
 
-namespace Catalog.Domain.Aggregates.AlbumAggregate
+namespace Catalog.Domain.Aggregates.Songs
 {
     public class ESongStatus : Enumeration
     {

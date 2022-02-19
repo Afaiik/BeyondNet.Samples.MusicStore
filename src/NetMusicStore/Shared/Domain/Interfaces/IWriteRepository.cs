@@ -2,10 +2,10 @@
 {
     public interface IWriteRepository<T, K> where T : IAggregateRoot
     {
-        void Insert(T item);
+        Task Insert(T item);
 
-        void Update(T item, K id);
+        Task Update(T item, K id);
 
-        void Delete(K id);      
+        Task Delete(K id);      
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Shared.Domain.Bus.Event;
 
-namespace Catalog.Domain.Exceptions
+namespace Catalog.Domain.Songs
 {
     public class SongDomainException : DomainException
     {

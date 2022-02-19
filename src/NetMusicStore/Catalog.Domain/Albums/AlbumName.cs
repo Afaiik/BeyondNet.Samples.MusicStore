@@ -1,7 +1,7 @@
 ﻿
 using Shared.Domain.ValueObjects;
 
-namespace Catalog.Domain.Album
+namespace Catalog.Domain.Albums
 {
     public class AlbumName : StringValueObject
     {

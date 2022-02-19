@@ -5,7 +5,7 @@ using Shared.Domain;
 using Shared.Domain.Bus.Event;
 using Shared.Domain.ValueObjects;
 
-namespace Catalog.Domain.Aggregates.AlbumAggregate
+namespace Catalog.Domain.Aggregates.Songs
 {
     public class Song : AggregateRoot
     {

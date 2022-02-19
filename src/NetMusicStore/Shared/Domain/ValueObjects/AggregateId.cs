@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shared.Domain.ValueObjects
+﻿namespace Shared.Domain.ValueObjects
 {
-    internal class AggregateId
+    public class AggregateId<TModel, T> : EntityId<T>
     {
+        protected AggregateId(T value) : base(value)
+        {
+        }
+
+        public static AggregateId<TModel, T> From(T value) => new AggregateId<TModel, T>(value);
     }
 }

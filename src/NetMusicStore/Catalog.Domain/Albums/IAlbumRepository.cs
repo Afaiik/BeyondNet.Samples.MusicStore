@@ -1,6 +1,6 @@
 ﻿using Shared.Domain.Interfaces;
 
-namespace Catalog.Domain.Aggregates.AlbumAggregate
+namespace Catalog.Domain.Albums
 {
     public interface IAlbumRepository : IReadRepository<Album, string>, IWriteRepository<Album, string>
     {

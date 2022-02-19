@@ -1,15 +1,15 @@
-﻿using Catalog.Domain.Albums;
-using Catalog.Domain.Shared.ValueObjects;
-using Shared.Domain.Bus.Event;
+﻿using NetMusicStore.Services.Ideas.Domain.Albums;
+using NetMusicStore.Services.Ideas.Domain.Shared.ValueObjects;
+using NetMusicStore.Shared.Domain.Bus.Event;
 
-namespace Catalog.Application.Albums
+namespace NetMusicStore.Services.Ideas.Application.Albums
 {
     public class AlbumCreator
     {
         private readonly IAlbumRepository _repository;
-        private readonly EventBus _eventBus;
+        private readonly IEventBus _eventBus;
 
-        public AlbumCreator(IAlbumRepository repository, EventBus eventBus) 
+        public AlbumCreator(IAlbumRepository repository, IEventBus eventBus) 
         {
             _repository = repository;
             _eventBus = eventBus;

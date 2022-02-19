@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Catalog.Domain.Services
+namespace NetMusicStore.Services.Ideas.Application.Services
 {
     public class MinutesDurationFormatter : IDurationFormatter
     {

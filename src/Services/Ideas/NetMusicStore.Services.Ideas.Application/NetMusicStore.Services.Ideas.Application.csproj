@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\Shared\NetMusicStore.Shared\NetMusicStore.Shared.csproj" />
+    <ProjectReference Include="..\NetMusicStore.Services.Ideas.Domain\NetMusicStore.Services.Ideas.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,5 @@
 ﻿
-namespace Catalog.Domain.Services
+namespace NetMusicStore.Services.Ideas.Application.Services
 {
     public interface IDurationFormatter
     {

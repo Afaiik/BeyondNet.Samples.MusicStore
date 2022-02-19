@@ -1,6 +1,6 @@
 using System;
 
-namespace Shared.Cli
+namespace NetMusicStore.Shared.Cli
 {
     public abstract class Command
     {

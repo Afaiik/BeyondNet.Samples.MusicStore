@@ -8,4 +8,3 @@ Of course, this App is only experimental and it's not ready to be used in produc
 
 # Bounded Context
 - MusicStore: Full NET Stack for FrontEnd/Backend applying microservices concepts. It will be the front end experience for subscribers.
-- BackOffice: Full JS Stack for FrontEnd/BackEnd applying microservices concepts. It will be the backoffice operative experience for employees.

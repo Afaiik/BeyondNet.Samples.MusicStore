@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\NetMusicStore.Shared\NetMusicStore.Shared.csproj" />
+    <ProjectReference Include="..\..\Shared\NetMusicStore.Shared\MusicStore.Shared.csproj" />
   </ItemGroup>
 
 </Project>

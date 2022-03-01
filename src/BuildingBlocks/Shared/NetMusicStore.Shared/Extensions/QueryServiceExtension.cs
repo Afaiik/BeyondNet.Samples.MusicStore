@@ -1,8 +1,8 @@
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
-using NetMusicStore.Shared.Domain.Bus.Query;
+using MusicStore.Shared.Domain.Bus.Query;
 
-namespace NetMusicStore.Shared.Extensions
+namespace MusicStore.Shared.Extensions
 {
     public static class QueryServiceExtension
     {

@@ -1,4 +1,4 @@
-namespace NetMusicStore.Shared.FiltersByCriteria
+namespace MusicStore.Shared.FiltersByCriteria
 {
     public class Order
     {

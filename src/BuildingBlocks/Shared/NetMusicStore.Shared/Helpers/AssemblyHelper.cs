@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using System.Reflection;
 
-namespace NetMusicStore.Shared.Helpers
+namespace MusicStore.Shared.Helpers
 {
     public static class AssemblyHelper
     {
@@ -16,7 +16,7 @@ namespace NetMusicStore.Shared.Helpers
 
     public static class Assemblies
     {
-        public const string MusicStore = "NetMusicStore.MusicStore";
-        public const string Backoffice = "NetMusicStore.Backoffice";
+        public const string MusicStore = "MusicStore.MusicStore";
+        public const string Backoffice = "MusicStore.Backoffice";
     }
 }

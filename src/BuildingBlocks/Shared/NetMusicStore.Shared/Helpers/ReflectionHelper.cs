@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Reflection;
 
-namespace NetMusicStore.Shared.Helpers
+namespace MusicStore.Shared.Helpers
 {
     public static class ReflectionHelper
     {

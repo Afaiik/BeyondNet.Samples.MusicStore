@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace NetMusicStore.Shared.ValueObjects
+namespace MusicStore.Shared.ValueObjects
 {
     public abstract class EntityId<T> : ValueObject
     {

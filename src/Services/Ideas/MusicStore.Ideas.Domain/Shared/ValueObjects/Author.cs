@@ -1,6 +1,6 @@
-﻿using NetMusicStore.Shared.ValueObjects;
+﻿using MusicStore.Shared.ValueObjects;
 
-namespace NetMusicStore.Ideas.Domain.Shared.ValueObjects
+namespace MusicStore.Ideas.Domain.Shared.ValueObjects
 {
     public class Author : ValueObject
     {

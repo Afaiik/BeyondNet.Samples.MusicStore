@@ -1,6 +1,6 @@
 using System;
 
-namespace NetMusicStore.Shared.Domain.Bus.Command
+namespace MusicStore.Shared.Domain.Bus.Command
 {
     public class CommandNotRegisteredError : Exception
     {

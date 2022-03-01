@@ -1,7 +1,7 @@
-﻿using NetMusicStore.Shared.Interfaces;
-using NetMusicStore.Shared.Domain.Bus.Event;
+﻿using MusicStore.Shared.Interfaces;
+using MusicStore.Shared.Domain.Bus.Event;
 
-namespace NetMusicStore.Shared.Domain
+namespace MusicStore.Shared.Domain
 { 
     public abstract class AggregateRoot :  IAggregateRoot
     {

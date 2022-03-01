@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace NetMusicStore.Shared.Helpers
+namespace MusicStore.Shared.Helpers
 {
     public class UuidHelper : ValidationAttribute
     {

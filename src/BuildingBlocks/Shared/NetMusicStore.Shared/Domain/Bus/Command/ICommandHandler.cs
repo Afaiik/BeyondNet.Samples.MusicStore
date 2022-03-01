@@ -1,4 +1,4 @@
-namespace NetMusicStore.Shared.Domain.Bus.Command
+namespace MusicStore.Shared.Domain.Bus.Command
 {
     public interface ICommandHandler<TCommand> where TCommand : Command
     {

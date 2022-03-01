@@ -1,6 +1,6 @@
-﻿using NetMusicStore.Shared.FiltersByCriteria;
+﻿using MusicStore.Shared.FiltersByCriteria;
 
-namespace NetMusicStore.Shared.Interfaces
+namespace MusicStore.Shared.Interfaces
 {
     public interface IReadRepository<T, K> where T : IAggregateRoot
     {

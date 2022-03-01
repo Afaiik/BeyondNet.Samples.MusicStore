@@ -1,4 +1,4 @@
-namespace NetMusicStore.Shared.Domain.Bus.Event
+namespace MusicStore.Shared.Domain.Bus.Event
 {
     public class DomainEventSubscribersInformation
     {

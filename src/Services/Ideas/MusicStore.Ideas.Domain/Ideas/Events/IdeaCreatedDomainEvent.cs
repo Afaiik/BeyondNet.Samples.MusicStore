@@ -1,30 +1,40 @@
 ﻿
-using NetMusicStore.Shared.Domain.Bus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
 
-namespace NetMusicStore.Ideas.Domain.Ideas.Events
+namespace MusicStore.Ideas.Domain.Ideas.Events
 {
     public class IdeaCreatedDomainEvent : DomainEvent
     {
-        public string AlbumId { get; }
+        public string Id { get; private set; }
+        public string Name { get; private set; }
+        public bool IsDraft { get; private set; }
 
-        public IdeaCreatedDomainEvent(string albumId)
+
+        public IdeaCreatedDomainEvent(string id, string name)
         {
-            AlbumId = albumId;
+            Id = id;
+            Name = name;
+            IsDraft = false;
         }
 
         public override string EventName()
         {
-            throw new NotImplementedException();
+            return this.GetType().Name.ToString();
         }
 
         public override Dictionary<string, string> ToPrimitives()
         {
-            throw new NotImplementedException();
+            return new Dictionary<string, string>
+            {
+                { "name", Name },
+                { "eventName", this.GetType().Name.ToString() },
+                { "id", Id }
+            };
         }
 
         public override DomainEvent FromPrimitives(string aggregateId, Dictionary<string, string> body, string eventId, string occurredOn)
         {
-            throw new NotImplementedException();
+            return new IdeaCreatedDomainEvent(aggregateId, body["name"]);
         }
     }
 }

@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace NetMusicStore.Shared.Cli
+namespace MusicStore.Shared.Cli
 {
     public abstract class CommandBuilder<T>
     {

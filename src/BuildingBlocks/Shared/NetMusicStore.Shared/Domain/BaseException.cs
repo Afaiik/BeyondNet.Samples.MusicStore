@@ -1,5 +1,5 @@
 ﻿
-namespace NetMusicStore.Shared.Domain
+namespace MusicStore.Shared.Domain
 {
     public abstract class BaseException : Exception
     {

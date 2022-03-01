@@ -1,4 +1,4 @@
-namespace NetMusicStore.Shared.ValueObjects
+namespace MusicStore.Shared.ValueObjects
 {
     public class StringValueObject : ValueObject
     {

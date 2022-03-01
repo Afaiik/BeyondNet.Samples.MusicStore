@@ -1,6 +1,6 @@
 using System;
 
-namespace NetMusicStore.Shared.Domain.Bus.Query
+namespace MusicStore.Shared.Domain.Bus.Query
 {
     public class QueryNotRegisteredError : Exception
     {

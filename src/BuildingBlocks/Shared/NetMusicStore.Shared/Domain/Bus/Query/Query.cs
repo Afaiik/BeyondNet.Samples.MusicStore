@@ -1,4 +1,4 @@
-namespace NetMusicStore.Shared.Domain.Bus.Query
+namespace MusicStore.Shared.Domain.Bus.Query
 {
     public abstract class Query
     {

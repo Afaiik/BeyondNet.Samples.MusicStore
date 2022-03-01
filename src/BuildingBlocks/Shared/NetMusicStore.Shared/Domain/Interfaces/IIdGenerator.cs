@@ -1,4 +1,4 @@
-﻿namespace SNetMusicStore.Shared.Interfaces
+﻿namespace SMusicStore.Shared.Interfaces
 {
     public interface IIdGenerator
     {

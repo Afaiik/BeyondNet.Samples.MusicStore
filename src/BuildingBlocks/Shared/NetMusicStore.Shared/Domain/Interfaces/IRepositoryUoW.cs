@@ -1,5 +1,5 @@
 ﻿
-namespace NetMusicStore.Shared.Interfaces
+namespace MusicStore.Shared.Interfaces
 {
     public interface IRepositoryUoW
     {

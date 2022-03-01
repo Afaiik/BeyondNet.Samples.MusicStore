@@ -2,7 +2,7 @@ using System.Reflection;
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace NetMusicStore.Shared.Domain.Bus.Event
+namespace MusicStore.Shared.Domain.Bus.Event
 {
     public static class DomainEventSubscriberInformationService
     {

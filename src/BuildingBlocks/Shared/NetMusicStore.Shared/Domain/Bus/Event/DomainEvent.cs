@@ -1,6 +1,6 @@
-﻿using NetMusicStore.Shared.Extensions;
+﻿using MusicStore.Shared.Extensions;
 
-namespace NetMusicStore.Shared.Domain.Bus.Event
+namespace MusicStore.Shared.Domain.Bus.Event
 {
     public abstract class DomainEvent
     {

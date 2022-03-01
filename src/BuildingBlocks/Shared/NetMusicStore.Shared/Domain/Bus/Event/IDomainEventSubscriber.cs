@@ -1,4 +1,4 @@
-namespace NetMusicStore.Shared.Domain.Bus.Event
+namespace MusicStore.Shared.Domain.Bus.Event
 {
     public interface IDomainEventSubscriber<TDomain> : IDomainEventSubscriberBase where TDomain : DomainEvent
     {

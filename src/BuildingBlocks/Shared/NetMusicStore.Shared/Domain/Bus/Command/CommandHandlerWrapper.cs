@@ -1,4 +1,4 @@
-namespace NetMusicStore.Shared.Domain.Bus.Command
+namespace MusicStore.Shared.Domain.Bus.Command
 {
     public abstract class CommandHandlerWrapper
     {

@@ -1,6 +1,6 @@
-using NetMusicStore.Shared.ValueObjects;
+using MusicStore.Shared.ValueObjects;
 
-namespace NetMusicStore.Shared.FiltersByCriteria
+namespace MusicStore.Shared.FiltersByCriteria
 {
     public class FilterValue : StringValueObject
     {

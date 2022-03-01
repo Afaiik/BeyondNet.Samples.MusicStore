@@ -1,8 +1,8 @@
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
-using NetMusicStore.Shared.Domain.Bus.Command;
+using MusicStore.Shared.Domain.Bus.Command;
 
-namespace NetMusicStore.Shared.Extensions
+namespace MusicStore.Shared.Extensions
 {
     public static class CommandServiceExtensions
     {

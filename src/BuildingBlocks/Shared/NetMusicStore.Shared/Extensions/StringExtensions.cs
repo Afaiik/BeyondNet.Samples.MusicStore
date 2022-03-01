@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace NetMusicStore.Shared.Extensions
+namespace MusicStore.Shared.Extensions
 {
     public static class StringExtensions
     {

@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.EventBus.Rabb
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0BEC9A08-8018-4006-A86A-961163DB8DD3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.Shared", "BuildingBlocks\Shared\NetMusicStore.Shared\NetMusicStore.Shared.csproj", "{ED3E08D8-3C3B-424B-9F44-594CB532AB69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Shared", "BuildingBlocks\Shared\NetMusicStore.Shared\MusicStore.Shared.csproj", "{ED3E08D8-3C3B-424B-9F44-594CB532AB69}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{576FE444-CED6-4EBA-ABC2-50F6AF206FC6}"
 EndProject
@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Ideas.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Ideas.Api", "Services\Ideas\MusicStore.Ideas.Api\MusicStore.Ideas.Api.csproj", "{106A5DE1-8CF7-424F-BC85-49A6FD3C28BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Ideas.Application", "Services\Ideas\MusicStore.Ideas.Application\MusicStore.Ideas.Application.csproj", "{9047233E-D5DA-4118-8D9F-5DFE8117B105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Ideas.Application", "Services\Ideas\MusicStore.Ideas.Application\MusicStore.Ideas.Application.csproj", "{9047233E-D5DA-4118-8D9F-5DFE8117B105}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

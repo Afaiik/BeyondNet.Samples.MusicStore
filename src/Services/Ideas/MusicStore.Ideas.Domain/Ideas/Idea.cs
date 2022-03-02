@@ -5,9 +5,8 @@ using MusicStore.Shared.ValueObjects;
 
 namespace MusicStore.Ideas.Domain.Ideas
 {
-    public class Idea : AggregateRoot
+    public class Idea : AggregateRoot<Idea, string>
     {
-        public AggregateId<Idea, string> Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
         public IReadOnlyList<Tag> Tags { get; private set; }
@@ -15,9 +14,8 @@ namespace MusicStore.Ideas.Domain.Ideas
         public bool IsDraft { get; private set; }
         public IdeaStatus Status { get; private set; }
 
-        private Idea(AggregateId<Idea, string> id, string name, string description, IReadOnlyList<Tag> tags) 
+        private Idea(AggregateId<Idea, string> id, string name, string description, IReadOnlyList<Tag> tags) : base(id)
         {
-            Id = id;
             Name = name;
             Description = description;
             IsDraft = false;

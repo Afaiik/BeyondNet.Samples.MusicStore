@@ -2,12 +2,12 @@ using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using NetMusicStore.Shared.Domain.Bus.Event;
-using NetMusicStore.EventBus.Event;
-using NetMusicStore.Shared.Extensions;
-using NetMusicStore.Shared.Helpers;
+using MusicStore.Shared.Domain.Bus.Event;
+using MusicStore.EventBus.Event;
+using MusicStore.Shared.Extensions;
+using MusicStore.Shared.Helpers;
 
-namespace NetMusicStore.EventBus.RabbitMq
+namespace MusicStore.EventBus.RabbitMq
 {
     public class RabbitMqDomainEventsConsumer : IDomainEventsConsumer
     {

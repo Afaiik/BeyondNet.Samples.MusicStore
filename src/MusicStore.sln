@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{685EA9A7-6C34-44B3-B984-A4256C4E28CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.EventBus", "BuildingBlocks\EventBus\EventBus\NetMusicStore.EventBus.csproj", "{6BBDEA71-C131-49B1-BD32-3BF84B047C98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.EventBus", "BuildingBlocks\EventBus\EventBus\MusicStore.EventBus.csproj", "{6BBDEA71-C131-49B1-BD32-3BF84B047C98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.EventBus.MsSql", "BuildingBlocks\EventBus\EventBus.MsSql\NetMusicStore.EventBus.MsSql.csproj", "{5018A501-301C-4B6F-A174-C7ECBE580DB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.EventBus.MsSql", "BuildingBlocks\EventBus\EventBus.MsSql\MusicStore.EventBus.MsSql.csproj", "{5018A501-301C-4B6F-A174-C7ECBE580DB3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetMusicStore.EventBus.RabbitMq", "BuildingBlocks\EventBus\EventBus.RabbitMq\NetMusicStore.EventBus.RabbitMq.csproj", "{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.EventBus.RabbitMq", "BuildingBlocks\EventBus\EventBus.RabbitMq\MusicStore.EventBus.RabbitMq.csproj", "{7E7B1E8D-6B6C-4055-AACC-C0A9468E2539}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0BEC9A08-8018-4006-A86A-961163DB8DD3}"
 EndProject

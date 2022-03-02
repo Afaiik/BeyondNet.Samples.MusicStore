@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using NetMusicStore.Shared.Domain.Bus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
 
-namespace NetMusicStore.EventBus.MsSql
+namespace MusicStore.EventBus.MsSql
 {
     public class MsSqlEventBus : IEventBus
     {

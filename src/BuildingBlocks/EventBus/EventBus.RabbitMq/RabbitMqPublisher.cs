@@ -1,7 +1,7 @@
 using System.Text;
 using RabbitMQ.Client;
 
-namespace NetMusicStore.EventBus.RabbitMq
+namespace MusicStore.EventBus.RabbitMq
 {
     public class RabbitMqPublisher
     {

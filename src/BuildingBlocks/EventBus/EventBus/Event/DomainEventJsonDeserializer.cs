@@ -1,8 +1,8 @@
 using System.Reflection;
-using NetMusicStore.Shared.Domain.Bus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
 using Newtonsoft.Json;
 
-namespace NetMusicStore.EventBus.Event
+namespace MusicStore.EventBus.Event
 {
     public class DomainEventJsonDeserializer
     {

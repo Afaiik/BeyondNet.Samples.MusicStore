@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EventBus.MsSql\NetMusicStore.EventBus.MsSql.csproj" />
-    <ProjectReference Include="..\EventBus\NetMusicStore.EventBus.csproj" />
+    <ProjectReference Include="..\EventBus.MsSql\MusicStore.EventBus.MsSql.csproj" />
+    <ProjectReference Include="..\EventBus\MusicStore.EventBus.csproj" />
   </ItemGroup>
 
 </Project>

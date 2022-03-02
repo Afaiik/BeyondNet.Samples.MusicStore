@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 
-namespace NetMusicStore.EventBus.RabbitMq
+namespace MusicStore.EventBus.RabbitMq
 {
     public class RabbitMqConfig
     {

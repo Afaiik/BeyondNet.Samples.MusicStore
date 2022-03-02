@@ -1,4 +1,4 @@
-namespace NetMusicStore.EventBus.RabbitMq
+namespace MusicStore.EventBus.RabbitMq
 {
     public static class RabbitMqExchangeNameFormatter
     {

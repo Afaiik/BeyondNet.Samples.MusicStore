@@ -1,7 +1,7 @@
-using NetMusicStore.Shared.Domain.Bus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
 using System.Text.Json;
 
-namespace NetMusicStore.EventBus.Event
+namespace MusicStore.EventBus.Event
 {
     public static class DomainEventJsonSerializer
     {

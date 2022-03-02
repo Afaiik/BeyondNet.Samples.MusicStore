@@ -1,9 +1,9 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using NetMusicStore.Shared.Domain.Bus.Event;
-using NetMusicStore.EventBus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
+using MusicStore.EventBus.Event;
 
-namespace SNetMusicStore.EventBus.MsSql
+namespace SMusicStore.EventBus.MsSql
 {
     public class MsSqlDomainEventsConsumer : IDomainEventsConsumer
     {

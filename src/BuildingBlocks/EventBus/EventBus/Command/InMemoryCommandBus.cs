@@ -1,9 +1,9 @@
-using NetMusicStore.Shared.Domain.Bus.Command;
+using MusicStore.Shared.Domain.Bus.Command;
 using System.Collections;
 using System.Collections.Concurrent;
 
 
-namespace NetMusicStore.EventBus.Command
+namespace MusicStore.EventBus.Command
 {
     public class InMemoryCommandBus : ICommandBus
     {

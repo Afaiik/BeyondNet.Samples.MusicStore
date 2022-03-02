@@ -2,7 +2,7 @@
 
 namespace MusicStore.Shared.Interfaces
 {
-    public interface IReadRepository<T, K> where T : IAggregateRoot
+    public interface IReadRepository<T, K> where T : sss
     {
         Task<IReadOnlyList<T>> Find(Criteria criteria);
 

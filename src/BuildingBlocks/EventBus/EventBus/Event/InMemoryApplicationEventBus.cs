@@ -1,7 +1,7 @@
-using NetMusicStore.Shared.Domain.Bus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace NetMusicStore.EventBus.Event
+namespace MusicStore.EventBus.Event
 {
     public class InMemoryApplicationEventBus : IEventBus
     {

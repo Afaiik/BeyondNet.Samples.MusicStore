@@ -1,6 +1,6 @@
-using NetMusicStore.Shared.Domain.Bus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
 
-namespace NetMusicStore.EventBus.RabbitMq
+namespace MusicStore.EventBus.RabbitMq
 {
     public static class RabbitMqQueueNameFormatter
     {

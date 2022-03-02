@@ -1,4 +1,4 @@
-namespace NetMusicStore.EventBus.Event
+namespace MusicStore.EventBus.Event
 {
     public interface IEventBusConfiguration
     {

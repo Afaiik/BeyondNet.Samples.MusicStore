@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
-using NetMusicStore.Shared.Domain.Bus.Query;
+using MusicStore.Shared.Domain.Bus.Query;
 
 
 namespace Shared.Infrastructure.Bus.Query
@@ -18,7 +18,7 @@ namespace Shared.Infrastructure.Bus.Query
             _provider = provider;
         }
 
-        public async Task<TResponse> Ask<TResponse>(NetMusicStore.Shared.Domain.Bus.Query.Query query)
+        public async Task<TResponse> Ask<TResponse>(MusicStore.Shared.Domain.Bus.Query.Query query)
         {
             var handler = GetWrappedHandlers<TResponse>(query);
 
@@ -27,7 +27,7 @@ namespace Shared.Infrastructure.Bus.Query
             return await handler.Handle(query, _provider);
         }
 
-        private QueryHandlerWrapper<TResponse> GetWrappedHandlers<TResponse>(NetMusicStore.Shared.Domain.Bus.Query.Query query)
+        private QueryHandlerWrapper<TResponse> GetWrappedHandlers<TResponse>(MusicStore.Shared.Domain.Bus.Query.Query query)
         {
             Type[] typeArgs = {query.GetType(), typeof(TResponse)};
 

@@ -1,9 +1,9 @@
 using RabbitMQ.Client.Exceptions;
-using NetMusicStore.Shared.Domain.Bus.Event;
-using NetMusicStore.EventBus.MsSql;
-using NetMusicStore.EventBus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
+using MusicStore.EventBus.MsSql;
+using MusicStore.EventBus.Event;
 
-namespace NetMusicStore.EventBus.RabbitMq
+namespace MusicStore.EventBus.RabbitMq
 {
     public class RabbitMqEventBus : IEventBus
     {

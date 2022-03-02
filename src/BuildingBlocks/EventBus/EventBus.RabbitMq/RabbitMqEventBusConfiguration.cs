@@ -1,8 +1,8 @@
-using NetMusicStore.EventBus.Event;
-using NetMusicStore.Shared.Domain.Bus.Event;
+using MusicStore.EventBus.Event;
+using MusicStore.Shared.Domain.Bus.Event;
 using RabbitMQ.Client;
 
-namespace NetMusicStore.EventBus.RabbitMq
+namespace MusicStore.EventBus.RabbitMq
 {
     public class RabbitMqEventBusConfiguration : IEventBusConfiguration
     {

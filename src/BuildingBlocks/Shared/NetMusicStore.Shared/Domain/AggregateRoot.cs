@@ -1,20 +1,12 @@
 ﻿using MusicStore.Shared.Domain.Interfaces;
 using MusicStore.Shared.Domain.Bus.Event;
-using MusicStore.Shared.ValueObjects;
 
 namespace MusicStore.Shared.Domain
 { 
-    public abstract class AggregateRoot<TObject, TType> :  IAggregateRoot<TObject, TType>
+    public abstract class AggregateRoot :  IAggregateRoot
     {
-        public AggregateId<TObject, TType> Id { get; }
-
+   
         private List<DomainEvent>? _domainEvents;
-
-
-        public AggregateRoot(AggregateId<TObject, TType> id)
-        {
-            Id = id;
-        }
 
         public IReadOnlyCollection<DomainEvent>? DomainEvents => _domainEvents?.AsReadOnly();
 

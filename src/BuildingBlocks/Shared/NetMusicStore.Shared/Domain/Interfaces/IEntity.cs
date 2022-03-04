@@ -1,9 +1,6 @@
-﻿using MusicStore.Shared.ValueObjects;
-
-namespace MusicStore.Shared.Domain.Interfaces
+﻿namespace MusicStore.Shared.Domain.Interfaces
 {
-    public interface IEntity<TType> 
+    public interface IEntity
     {
-        public EntityId<TType> Id { get; }
     }
 }

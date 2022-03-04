@@ -20,20 +20,5 @@ namespace MusicStore.Shared.ValueObjects
         {
             yield return Value;
         }
-
-        public override bool Equals(object obj)
-        {
-            if (this == obj) return true;
-
-            var item = obj as IntValueObject;
-            if (item == null) return false;
-
-            return Value == item.Value;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Value);
-        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MusicStore.Shared.ValueObjects
 {
-    public class AggregateId<TModel, T> : EntityId<T>
+    public class AggregateId<TModel, T> : IdValueObject<T>
     {
         protected AggregateId(T value) : base(value)
         {

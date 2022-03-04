@@ -1,21 +1,12 @@
 ﻿using MusicStore.Shared.Domain.Interfaces;
-using MusicStore.Shared.ValueObjects;
 
 namespace MusicStore.Shared.Domain
 {
-    public abstract class Entity<TType> : IEntity<TType>
+    public abstract class Entity: IEntity
     {
-        public EntityId<TType> Id { get; private set; }
-
-
-        public Entity(EntityId<TType> id)
-        {
-            Id = id;
-        }
-
         public override bool Equals(object obj)
         {
-            if (obj == null || !(obj is Entity<TType>))
+            if (obj == null || !(obj is Entity))
                 return false;
 
             if (Object.ReferenceEquals(this, obj))
@@ -24,9 +15,7 @@ namespace MusicStore.Shared.Domain
             if (this.GetType() != obj.GetType())
                 return false;
 
-            Entity<TType> item = (Entity<TType>)obj;
-
-            return item.Id == this.Id;
+            return true;
         }
 
         public override int GetHashCode()
@@ -34,7 +23,7 @@ namespace MusicStore.Shared.Domain
            return base.GetHashCode();
         }
 
-        public static bool operator ==(Entity<TType> left, Entity<TType> right)
+        public static bool operator ==(Entity left, Entity right)
         {
             if (Object.Equals(left, null))
                 return (Object.Equals(right, null)) ? true : false;
@@ -42,7 +31,7 @@ namespace MusicStore.Shared.Domain
                 return left.Equals(right);
         }
 
-        public static bool operator !=(Entity<TType> left, Entity<TType> right)
+        public static bool operator !=(Entity left, Entity right)
         {
             return !(left == right);
         }

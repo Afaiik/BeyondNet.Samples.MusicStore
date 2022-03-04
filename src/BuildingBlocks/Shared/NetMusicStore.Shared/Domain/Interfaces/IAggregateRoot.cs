@@ -3,10 +3,8 @@ using MusicStore.Shared.ValueObjects;
 
 namespace MusicStore.Shared.Domain.Interfaces
 {
-    public interface IAggregateRoot<TObject, TType>
+    public interface IAggregateRoot :  IEntity
     {
-        public AggregateId<TObject, TType> Id { get; }
-
         List<DomainEvent> PullDomainEvents();
 
         void AddDomainEvent(DomainEvent domainEvent);

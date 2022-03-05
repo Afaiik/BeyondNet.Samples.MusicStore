@@ -1,6 +1,8 @@
-﻿namespace MusicStore.Shared.Interfaces
+﻿using MusicStore.Shared.Domain.Interfaces;
+
+namespace MusicStore.Shared.Interfaces
 {
-    public interface IWriteRepository<T, K> where T : sss
+    public interface IWriteRepository<T, K> where T : IAggregateRoot
     {
         Task Insert(T item);
 

@@ -5,7 +5,9 @@
         public AggregateId<Idea, string> Id { get; }
         public IdeaName Name { get; }
         public IdeaDescription Description { get; }
-        public IReadOnlyList<Tag> Tags { get; }
+
+        private List<Tag> _tags;
+        public IReadOnlyList<Tag> Tags => _tags.AsReadOnly();
 
         private List<IdeaResource> _resources;
         public IReadOnlyList<IdeaResource> Resources => _resources.AsReadOnly();
@@ -13,23 +15,22 @@
         public IdeaDraft IsDraft { get; }
         public IdeaStatus Status { get; private set; }
 
-        private Idea(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description, IReadOnlyList<Tag> tags) 
+        private Idea(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description) 
         {
             Id = id;
             Name = name;
             Description = description;
             IsDraft = IdeaDraft.Default;
-            Tags = tags;
             Status = IdeaStatus.Created;
-
+            _tags = new List<Tag>();
             _resources = new List<IdeaResource>();
 
             AddIdeaCreatedDomainEvent(Id.Value, Name.Value);
         }
 
-        public static Idea Create(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description, IReadOnlyList<Tag> tags)
+        public static Idea Create(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description)
         {
-            return new Idea(id, name, description, tags);
+            return new Idea(id, name, description);
         }
 
         public void Draft()
@@ -83,6 +84,17 @@
             AddIdeaResourceSharedDomainEvent(resource.Id.Value);
         }
 
+        public void AddTag(Tag tag)
+        {
+            _tags.Add(tag);
+
+            AddIdeaTagCreatedDomainEvent(tag.Value);
+        }
+
+        public void Removetag(Tag tag)
+        {
+            _tags.Remove(tag);
+        }
 
         private void AddIdeaCreatedDomainEvent(string id, string name)
         {
@@ -108,6 +120,13 @@
         private void AddIdeaResourceSharedDomainEvent(string id)
         {
             var createdEvent = new IdeaResourceSharedDomainEvent(id);
+
+            AddDomainEvent(createdEvent);
+        }
+
+        private void AddIdeaTagCreatedDomainEvent(string name)
+        {
+            var createdEvent = new IdeaTagCreatedDomainEvent(name);
 
             AddDomainEvent(createdEvent);
         }

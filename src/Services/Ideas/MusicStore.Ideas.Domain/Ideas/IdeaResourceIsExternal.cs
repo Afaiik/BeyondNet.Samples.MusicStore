@@ -2,8 +2,13 @@
 {
     public class IdeaResourceIsExternal : BoolValueObject
     {
-        public IdeaResourceIsExternal(bool value) : base(value)
+        private IdeaResourceIsExternal(bool value) : base(value)
         {
+        }
+
+        public static IdeaResourceIsExternal Create(bool value)
+        {
+            return new IdeaResourceIsExternal(value);
         }
     }
 }

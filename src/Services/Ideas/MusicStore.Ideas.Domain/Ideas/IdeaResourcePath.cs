@@ -2,8 +2,13 @@
 {
     public class IdeaResourcePath : PathValueObject
     {
-        public IdeaResourcePath(string value) : base(value)
+        private IdeaResourcePath(string value) : base(value)
         {
+        }
+
+        public static IdeaResourcePath Create(string path)
+        {
+            return new IdeaResourcePath(path);
         }
     }
 }

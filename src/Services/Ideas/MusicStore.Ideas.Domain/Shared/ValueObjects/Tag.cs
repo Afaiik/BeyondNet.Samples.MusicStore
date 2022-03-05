@@ -2,8 +2,13 @@
 {
     public class Tag : StringValueObject
     {
-        public Tag(string value) : base(value)
+        private Tag(string value) : base(value)
         {
+        }
+
+        public static Tag Create(string name)
+        {
+            return new Tag(name);
         }
     }
 }

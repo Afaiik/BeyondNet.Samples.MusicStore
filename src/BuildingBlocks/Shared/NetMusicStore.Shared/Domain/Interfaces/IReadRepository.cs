@@ -1,8 +1,9 @@
-﻿using MusicStore.Shared.FiltersByCriteria;
+﻿using MusicStore.Shared.Domain.Interfaces;
+using MusicStore.Shared.FiltersByCriteria;
 
 namespace MusicStore.Shared.Interfaces
 {
-    public interface IReadRepository<T, K> where T : sss
+    public interface IReadRepository<T, K> where T: IAggregateRoot
     {
         Task<IReadOnlyList<T>> Find(Criteria criteria);
 

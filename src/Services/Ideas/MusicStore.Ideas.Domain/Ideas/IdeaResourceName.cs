@@ -2,8 +2,13 @@
 {
     public class IdeaResourceName : StringValueObject
     {
-        public IdeaResourceName(string value) : base(value)
+        private IdeaResourceName(string value) : base(value)
         {
+        }
+
+        public static IdeaResourceName Create(string name)
+        {
+            return new IdeaResourceName(name);
         }
     }
 }

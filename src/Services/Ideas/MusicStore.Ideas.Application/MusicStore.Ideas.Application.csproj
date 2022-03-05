@@ -17,4 +17,8 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MusicStore.Ideas.Domain\MusicStore.Ideas.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

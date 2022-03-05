@@ -36,6 +36,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Ideas.Api", "Ser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Ideas.Application", "Services\Ideas\MusicStore.Ideas.Application\MusicStore.Ideas.Application.csproj", "{9047233E-D5DA-4118-8D9F-5DFE8117B105}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{62CEFC3C-A6A2-4D79-BA63-510035ADA52D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Resources.Domain", "Services\Resources\MusicStore.Resources.Domain\MusicStore.Resources.Domain.csproj", "{746D3061-C2A8-4177-99CF-CB83CBDFEBAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Resources.Job", "Services\Resources\MusicStore.Resources.Job\MusicStore.Resources.Job.csproj", "{F56DC26D-72DD-46B0-B690-DCC06480B219}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +76,14 @@ Global
 		{9047233E-D5DA-4118-8D9F-5DFE8117B105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9047233E-D5DA-4118-8D9F-5DFE8117B105}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9047233E-D5DA-4118-8D9F-5DFE8117B105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746D3061-C2A8-4177-99CF-CB83CBDFEBAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746D3061-C2A8-4177-99CF-CB83CBDFEBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746D3061-C2A8-4177-99CF-CB83CBDFEBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746D3061-C2A8-4177-99CF-CB83CBDFEBAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56DC26D-72DD-46B0-B690-DCC06480B219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56DC26D-72DD-46B0-B690-DCC06480B219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56DC26D-72DD-46B0-B690-DCC06480B219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56DC26D-72DD-46B0-B690-DCC06480B219}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +101,9 @@ Global
 		{17C697B3-1A1F-44B6-84F4-7C207F9C4A7B} = {B749613F-30C6-48FA-A139-2CF1541B53CC}
 		{106A5DE1-8CF7-424F-BC85-49A6FD3C28BE} = {B749613F-30C6-48FA-A139-2CF1541B53CC}
 		{9047233E-D5DA-4118-8D9F-5DFE8117B105} = {B749613F-30C6-48FA-A139-2CF1541B53CC}
+		{62CEFC3C-A6A2-4D79-BA63-510035ADA52D} = {576FE444-CED6-4EBA-ABC2-50F6AF206FC6}
+		{746D3061-C2A8-4177-99CF-CB83CBDFEBAF} = {62CEFC3C-A6A2-4D79-BA63-510035ADA52D}
+		{F56DC26D-72DD-46B0-B690-DCC06480B219} = {62CEFC3C-A6A2-4D79-BA63-510035ADA52D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21FF9321-A951-4A71-85A6-0286807B4762}

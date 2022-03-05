@@ -42,6 +42,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Resources.Domain
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Resources.Job", "Services\Resources\MusicStore.Resources.Job\MusicStore.Resources.Job.csproj", "{F56DC26D-72DD-46B0-B690-DCC06480B219}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Ideas.Infrastructure", "Services\Ideas\MusicStore.Ideas.Infrastructure\MusicStore.Ideas.Infrastructure.csproj", "{62F6F8B5-CA7C-416E-8292-3B6164FFCA83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Resources.Infrastructure", "Services\Resources\MusicStore.Resources.Infrastructure\MusicStore.Resources.Infrastructure.csproj", "{1A3183F7-9787-49D6-AC49-FC0587EEAB69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +88,14 @@ Global
 		{F56DC26D-72DD-46B0-B690-DCC06480B219}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F56DC26D-72DD-46B0-B690-DCC06480B219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F56DC26D-72DD-46B0-B690-DCC06480B219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F6F8B5-CA7C-416E-8292-3B6164FFCA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F6F8B5-CA7C-416E-8292-3B6164FFCA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F6F8B5-CA7C-416E-8292-3B6164FFCA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F6F8B5-CA7C-416E-8292-3B6164FFCA83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3183F7-9787-49D6-AC49-FC0587EEAB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3183F7-9787-49D6-AC49-FC0587EEAB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3183F7-9787-49D6-AC49-FC0587EEAB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3183F7-9787-49D6-AC49-FC0587EEAB69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +116,8 @@ Global
 		{62CEFC3C-A6A2-4D79-BA63-510035ADA52D} = {576FE444-CED6-4EBA-ABC2-50F6AF206FC6}
 		{746D3061-C2A8-4177-99CF-CB83CBDFEBAF} = {62CEFC3C-A6A2-4D79-BA63-510035ADA52D}
 		{F56DC26D-72DD-46B0-B690-DCC06480B219} = {62CEFC3C-A6A2-4D79-BA63-510035ADA52D}
+		{62F6F8B5-CA7C-416E-8292-3B6164FFCA83} = {B749613F-30C6-48FA-A139-2CF1541B53CC}
+		{1A3183F7-9787-49D6-AC49-FC0587EEAB69} = {62CEFC3C-A6A2-4D79-BA63-510035ADA52D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21FF9321-A951-4A71-85A6-0286807B4762}

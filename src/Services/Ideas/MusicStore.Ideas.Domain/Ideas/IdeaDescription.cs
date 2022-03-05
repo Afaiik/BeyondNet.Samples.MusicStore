@@ -1,6 +1,4 @@
-﻿using MusicStore.Shared.ValueObjects;
-
-namespace MusicStore.Ideas.Domain.Ideas
+﻿namespace MusicStore.Ideas.Domain.Ideas
 {
     public class IdeaDescription : StringValueObject
     {

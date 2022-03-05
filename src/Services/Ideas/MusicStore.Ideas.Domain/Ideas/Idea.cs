@@ -1,10 +1,4 @@
-﻿using MusicStore.Ideas.Domain.Ideas.Events;
-using MusicStore.Ideas.Domain.Shared.ValueObjects;
-using MusicStore.Shared.Domain;
-using MusicStore.Shared.Domain.ValueObjects;
-using MusicStore.Shared.ValueObjects;
-
-namespace MusicStore.Ideas.Domain.Ideas
+﻿namespace MusicStore.Ideas.Domain.Ideas
 {
     public class Idea : AggregateRoot
     {

@@ -1,7 +1,4 @@
-﻿using MusicStore.Shared.Domain;
-using MusicStore.Shared.Domain.ValueObjects;
-
-namespace MusicStore.Ideas.Domain.Ideas
+﻿namespace MusicStore.Ideas.Domain.Ideas
 {
     public class IdeaResource : Entity
     {

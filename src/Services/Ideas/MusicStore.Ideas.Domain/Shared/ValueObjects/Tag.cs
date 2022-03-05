@@ -1,6 +1,4 @@
-﻿using MusicStore.Shared.ValueObjects;
-
-namespace MusicStore.Ideas.Domain.Shared.ValueObjects
+﻿namespace MusicStore.Ideas.Domain.Shared.ValueObjects
 {
     public class Tag : StringValueObject
     {

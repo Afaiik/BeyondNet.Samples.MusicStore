@@ -17,7 +17,7 @@ namespace MusicStore.Ideas.Domain.Ideas
         public IReadOnlyList<IdeaResource> Resources => _resources.AsReadOnly();
 
         public IdeaDraft IsDraft { get; }
-        public IdeaStatus Status { get; }
+        public IdeaStatus Status { get; private set; }
 
         private Idea(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description, IReadOnlyList<Tag> tags) 
         {
@@ -38,7 +38,34 @@ namespace MusicStore.Ideas.Domain.Ideas
             return new Idea(id, name, description, tags);
         }
 
-        public void AddResource(string name, string path, bool isExternal)
+        public void Draft()
+        {
+            Status = IdeaStatus.Draft;
+        }
+
+        public void UnDraft()
+        {
+            Status = IdeaStatus.Created;
+        }
+
+        public void Close()
+        {
+            Status = IdeaStatus.Closed;
+        }
+
+        public void Cancel()
+        {
+            Status = IdeaStatus.Canceled;
+        }
+
+        public void Promote()
+        {
+            Status = IdeaStatus.Promoted;
+
+            AddIdeaPromotedDomainEvent(Id.Value);
+        }
+
+        public void AddResource(IdeaResourceName name, IdeaResourcePath path, IdeaResourceIsExternal isExternal)
         {
             var resourceId = EntityId<string>.From(Guid.NewGuid().ToString());
 
@@ -46,8 +73,22 @@ namespace MusicStore.Ideas.Domain.Ideas
 
             _resources.Add(resource);
 
-            AddIdeaResourceCreatedDomainEvent(resourceId.Value, name, path, isExternal);
+            if (isExternal.Value) 
+                AddIdeaResourceCreatedDomainEvent(resourceId.Value, name.Value, path.Value, isExternal.Value);
         }
+
+        public void RemoveResource(IdeaResource resource)
+        {
+            _resources.Remove(resource);
+        }
+
+        public void ShareResource(IdeaResource resource)
+        {
+            resource.Share();
+
+            AddIdeaResourceSharedDomainEvent(resource.Id.Value);
+        }
+
 
         private void AddIdeaCreatedDomainEvent(string id, string name)
         {
@@ -56,9 +97,23 @@ namespace MusicStore.Ideas.Domain.Ideas
             AddDomainEvent(createdEvent);
         }
 
+        private void AddIdeaPromotedDomainEvent(string id)
+        {
+            var createdEvent = new IdeaPromotedDomainEvent(id);
+
+            AddDomainEvent(createdEvent);
+        }
+
         private void AddIdeaResourceCreatedDomainEvent(string id, string name, string path, bool isExternal)
         {
             var createdEvent = new IdeaResourceCreatedDomainEvent(id, name, path, isExternal);
+
+            AddDomainEvent(createdEvent);
+        }
+
+        private void AddIdeaResourceSharedDomainEvent(string id)
+        {
+            var createdEvent = new IdeaResourceSharedDomainEvent(id);
 
             AddDomainEvent(createdEvent);
         }

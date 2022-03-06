@@ -2,9 +2,12 @@
 {
     public class Idea : AggregateRoot
     {
-        public AggregateId<Idea, string> Id { get; }
-        public IdeaName Name { get; }
-        public IdeaDescription Description { get; }
+        public AggregateId<Idea, string> Id { get; init; }
+        public IdeaName Name { get; init; }
+        public IdeaDescription Description { get; init; }
+        public Owner Owner { get; init; }
+        public IdeaDraft IsDraft { get; init; }
+        public IdeaStatus Status { get; private set; }
 
         private List<Tag> _tags;
         public IReadOnlyList<Tag> Tags => _tags.AsReadOnly();
@@ -12,25 +15,24 @@
         private List<IdeaResource> _resources;
         public IReadOnlyList<IdeaResource> Resources => _resources.AsReadOnly();
 
-        public IdeaDraft IsDraft { get; }
-        public IdeaStatus Status { get; private set; }
-
-        private Idea(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description) 
+        private Idea(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description, Owner owner) 
         {
             Id = id;
             Name = name;
             Description = description;
             IsDraft = IdeaDraft.Default;
             Status = IdeaStatus.Created;
+            Owner = owner;
+
             _tags = new List<Tag>();
             _resources = new List<IdeaResource>();
 
             AddIdeaCreatedDomainEvent(Id.Value, Name.Value);
         }
 
-        public static Idea Create(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description)
+        public static Idea Create(AggregateId<Idea, string> id, IdeaName name, IdeaDescription description, Owner owner)
         {
-            return new Idea(id, name, description);
+            return new Idea(id, name, description, owner);
         }
 
         public void Draft()

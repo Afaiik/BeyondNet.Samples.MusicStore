@@ -9,6 +9,7 @@ namespace MusicStore.Ideas.Application.Commands
     public class CreateIdeaCommandHandler : IRequestHandler<CreateIdeaCommand, bool>
     {
         private readonly IMediator _mediator;
+
         private readonly IIdeaRepository _ideaRepository;
 
         public CreateIdeaCommandHandler(IMediator mediator, IIdeaRepository ideaRepository)
@@ -21,7 +22,8 @@ namespace MusicStore.Ideas.Application.Commands
         {
             var id = AggregateId<Idea, string>.From(Guid.NewGuid().ToString());
 
-            var idea = Idea.Create(id, IdeaName.Create(request.Name), IdeaDescription.Create(request.Description));
+            // TODO: Refactoring Owner
+            var idea = Idea.Create(id, IdeaName.Create(request.Name), IdeaDescription.Create(request.Description), Owner.Create("foo", "beyondnet"));
 
             request.Tags.ToList().ForEach(tag => idea.AddTag(Tag.Create(tag)));
 

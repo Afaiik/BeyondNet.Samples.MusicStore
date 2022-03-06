@@ -4,7 +4,7 @@ using MusicStore.Ideas.Application.Commands;
 
 namespace MusicStore.Ideas.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class IdeaController : ControllerBase
     {

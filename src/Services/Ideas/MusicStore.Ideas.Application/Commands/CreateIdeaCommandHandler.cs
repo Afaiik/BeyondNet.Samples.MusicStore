@@ -1,9 +1,4 @@
-﻿using MediatR;
-using MusicStore.Ideas.Domain.Ideas;
-using MusicStore.Ideas.Domain.Shared.ValueObjects;
-using MusicStore.Shared.ValueObjects;
-
-namespace MusicStore.Ideas.Application.Commands
+﻿namespace MusicStore.Ideas.Application.Commands
 {
 
     public class CreateIdeaCommandHandler : IRequestHandler<CreateIdeaCommand, bool>

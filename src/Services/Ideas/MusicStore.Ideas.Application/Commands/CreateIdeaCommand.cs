@@ -1,7 +1,4 @@
-﻿using MediatR;
-using System.Runtime.Serialization;
-
-namespace MusicStore.Ideas.Application.Commands
+﻿namespace MusicStore.Ideas.Application.Commands
 {
     [DataContract]
     public class CreateIdeaCommand : IRequest<bool>

@@ -1,4 +1,4 @@
 ﻿namespace MusicStore.Catalog.Application.Queries
 {
-    public record GetIdeaListQuery() : IRequest<List<Idea>>;
+    public record GetIdeaListQuery() : IRequest<List<IdeaModel>>;
 }

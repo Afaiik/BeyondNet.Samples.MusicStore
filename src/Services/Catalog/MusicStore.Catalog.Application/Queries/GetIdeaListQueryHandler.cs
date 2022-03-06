@@ -1,6 +1,6 @@
 ﻿namespace MusicStore.Catalog.Application.Queries
 {
-    public class GetIdeaListQueryHandler : IRequestHandler<GetIdeaListQuery, List<Idea>>
+    public class GetIdeaListQueryHandler : IRequestHandler<GetIdeaListQuery, List<IdeaModel>>
     {
         private readonly IIdeaRepository repository;
 
@@ -9,9 +9,9 @@
             this.repository = repository;
         }
 
-        public Task<List<Idea>> Handle(GetIdeaListQuery request, CancellationToken cancellationToken)
+        public Task<List<IdeaModel>> Handle(GetIdeaListQuery request, CancellationToken cancellationToken)
         {
-            var result = new List<Idea>();
+            var result = new List<IdeaModel>();
 
             var domainData = repository.Find();
 

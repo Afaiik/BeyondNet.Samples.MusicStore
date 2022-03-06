@@ -1,6 +1,4 @@
-﻿using IdeaModel = MusicStore.Catalog.Application.Queries.Idea;
-
-namespace MusicStore.Catalog.Api.Controllers
+﻿namespace MusicStore.Catalog.Api.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
@@ -20,7 +18,15 @@ namespace MusicStore.Catalog.Api.Controllers
 
             return Ok();
         }
-        
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List<IdeaModel>>> GetById(string id)
+        {
+            var data = await _mediator.Send(new GetIdeaByIdQuery(id));
+
+            return Ok();
+        }
+
         [HttpPost]
         public async Task<ActionResult<bool>> Post([FromBody] CreateIdeaCommand createIdeaCommand)
         {

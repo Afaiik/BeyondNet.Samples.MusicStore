@@ -17,6 +17,7 @@
         {
             var id = AggregateId<Idea, string>.From(Guid.NewGuid().ToString());
 
+            
             // TODO: Refactoring Owner
             var idea = Idea.Create(id, IdeaName.Create(request.Name), IdeaDescription.Create(request.Description), Owner.Create("foo", "beyondnet"));
 

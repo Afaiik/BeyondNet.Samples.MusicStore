@@ -7,6 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<IIdeaRepository>();
+builder.Services.AddMediatR(typeof(MusicStore.Ideas.Application.StartUp).Assembly);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

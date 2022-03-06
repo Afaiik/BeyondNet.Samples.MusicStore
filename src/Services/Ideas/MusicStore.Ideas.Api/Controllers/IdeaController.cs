@@ -1,6 +1,4 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using MusicStore.Ideas.Application.Commands;
+﻿using IdeaModel = MusicStore.Ideas.Application.Queries.Idea;
 
 namespace MusicStore.Ideas.Api.Controllers
 {
@@ -12,7 +10,15 @@ namespace MusicStore.Ideas.Api.Controllers
 
         public IdeaController(IMediator mediator)
         {
-            this._mediator = mediator;
+            _mediator = mediator;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<IdeaModel>>> Get()
+        {
+            var data = await _mediator.Send(new GetIdeaListQuery());
+
+            return Ok();
         }
         
         [HttpPost]

@@ -1,3 +1,5 @@
+using MusicStore.Catalog.Infrastructure.Database;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IIdeaRepository>();
+builder.Services.AddSingleton<IIdeaRepository, IdeaRepository>();
 builder.Services.AddMediatR(typeof(MusicStore.Catalog.Application.StartUp).Assembly);
 
 var app = builder.Build();

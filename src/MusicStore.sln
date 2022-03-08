@@ -22,9 +22,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{1749
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Catalog.Api", "Services\Catalog\MusicStore.Catalog.Api\MusicStore.Catalog.Api.csproj", "{B3E77B9D-DABE-450A-88EA-E3E625ADD98B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Ideas.Application", "Services\Catalog\MusicStore.Catalog.Application\MusicStore.Ideas.Application.csproj", "{3620E8BB-7CF0-43ED-A905-55E8D54E47D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Catalog.Application", "Services\Catalog\MusicStore.Catalog.Application\MusicStore.Catalog.Application.csproj", "{3620E8BB-7CF0-43ED-A905-55E8D54E47D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicStore.Catalog.Domain", "Services\Catalog\MusicStore.Catalog.Domain\MusicStore.Catalog.Domain.csproj", "{948CD61C-E7E0-464D-8492-287B6A716B22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore.Catalog.Infrastructure", "Services\Catalog\MusicStore.Catalog.Infrastructure\MusicStore.Catalog.Infrastructure.csproj", "{55D09EDB-D116-4BBD-B248-2308FD1B02E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 		{948CD61C-E7E0-464D-8492-287B6A716B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{948CD61C-E7E0-464D-8492-287B6A716B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{948CD61C-E7E0-464D-8492-287B6A716B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D09EDB-D116-4BBD-B248-2308FD1B02E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D09EDB-D116-4BBD-B248-2308FD1B02E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D09EDB-D116-4BBD-B248-2308FD1B02E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D09EDB-D116-4BBD-B248-2308FD1B02E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{B3E77B9D-DABE-450A-88EA-E3E625ADD98B} = {174967AC-9FA1-4640-B7A4-AAA70181771B}
 		{3620E8BB-7CF0-43ED-A905-55E8D54E47D9} = {174967AC-9FA1-4640-B7A4-AAA70181771B}
 		{948CD61C-E7E0-464D-8492-287B6A716B22} = {174967AC-9FA1-4640-B7A4-AAA70181771B}
+		{55D09EDB-D116-4BBD-B248-2308FD1B02E6} = {174967AC-9FA1-4640-B7A4-AAA70181771B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21FF9321-A951-4A71-85A6-0286807B4762}

@@ -13,7 +13,7 @@
         {
             var allIdeas = _repository.FindById(request.id);
 
-            var data = new IdeaModel();
+            var data = new IdeaModel("","",null,null);
 
             return Task.FromResult(data);
         }

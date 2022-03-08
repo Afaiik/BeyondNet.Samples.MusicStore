@@ -16,7 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MusicStore.Catalog.Application\MusicStore.Ideas.Application.csproj" />
+    <ProjectReference Include="..\MusicStore.Catalog.Application\MusicStore.Catalog.Application.csproj" />
+    <ProjectReference Include="..\MusicStore.Catalog.Infrastructure\MusicStore.Catalog.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
